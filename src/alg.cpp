@@ -4,8 +4,7 @@
 #incluse <map>
 std::string infx2pstfx(std::string inf) {
   TStack<char> stack;
-	std::string res = "", temp = "";
-	char temptop = 'a';
+	std::string res = "";
 	//Удаляем пробелы
 	inf.erase(remove_if(inf.begin(), inf.end(), isspace), inf.end());
 
