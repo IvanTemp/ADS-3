@@ -1,12 +1,10 @@
 // Copyright 2021 NNTU-CS
 #include <string>
 #include "tstack.h"
-#incluse <map>
+#include <map>
 std::string infx2pstfx(std::string inf) {
   TStack<char> stack;
 	std::string res = "";
-	//Удаляем пробелы
-	inf.erase(remove_if(inf.begin(), inf.end(), isspace), inf.end());
 
 	std::map<char, int>prior = { {'(', 0}, {')', 1}, {'+', 2}, {'-', 2}, {'*', 3}, {'/', 3} };
 
