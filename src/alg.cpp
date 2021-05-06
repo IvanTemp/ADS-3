@@ -6,11 +6,11 @@ std::string infx2pstfx(std::string inf) {
 TStack<char> stack;
 std::string res = "";
 std::map<char, int>prior = { {'(', 0}, {')', 1}, {'+', 2}, {'-', 2}, {'*', 3}, {'/', 3} };
-for (int i = 0; i < inf.length(); i++)
-{if (inf[i] >= '1' && inf[i] <= '9')
-{res += inf[i];
-}else if (inf[i] == '(')
-{stack.push(inf[i]);
+for (int i = 0; i < inf.length(); i++){
+if (inf[i] >= '1' && inf[i] <= '9'){
+res += inf[i];
+}else if (inf[i] == '('){
+stack.push(inf[i]);
 }else if (inf[i] == ')'){
 while (stack.get() != '('){
 res += stack.get();
@@ -48,8 +48,8 @@ if (pst[i] == '+'){
 stack.push(temp1 + temp2);
 }else if (pst[i] == '-'){
 stack.push(temp2 - temp1);}
-else if (pst[i] == '*')
-{stack.push(temp1 * temp2);}
+else if (pst[i] == '*'){
+stack.push(temp1 * temp2);}
 else if (pst[i] == '/'){
 stack.push(temp2 / temp1);}}}
 return stack.get();
