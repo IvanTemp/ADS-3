@@ -4,8 +4,9 @@
 #include "tstack.h"
 std::string infx2pstfx(std::string inf) {
 TStack<char> stack;
-std::string res = "";
-std::map<char,int>prior={{'(',0},{')',1},{'+',2},{'-',2},{'*',3},{'/',3}};
+std::string res;
+std::map<char, int>prior = {{'(', 0}, {')', 1}, {'+', 2}, 
+                            {'-', 2}, {'*', 3}, {'/', 3}};
 for (int i = 0; i < inf.length(); i++) {
 if (inf[i] >= '1' && inf[i] <= '9') {
 res += inf[i];
@@ -24,7 +25,7 @@ stack.push(inf[i]);}}
 while (!stack.isEmpty()) {
 res += stack.get();
 stack.pop();}
-std::string fres = "";
+std::string fres;
 for (int i = 0; i < res.size(); i++) {
 fres += res[i];
 fres += " ";}
@@ -37,14 +38,14 @@ int temp1 = 0;
 int temp2 = 0;
 TStack<int> stack;
 for (int i = 0; i < pst.length(); i++) {
-if (pst[i] >= '1' && pst[i] <= '9'){
+if (pst[i] >= '1' && pst[i] <= '9') {
 stack.push(pst[i] - '0');}
 if (pst[i] == '+' || pst[i] == '-' || pst[i] == '*' || pst[i] == '/') {
 temp1 = stack.get();
 stack.pop();
 temp2 = stack.get();
 stack.pop();
-if (pst[i] == '+'){
+if (pst[i] == '+') {
 stack.push(temp1 + temp2);
 } else if (pst[i] == '-') {
 stack.push(temp2 - temp1);
