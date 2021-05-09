@@ -4,8 +4,8 @@
 #include "tstack.h"
 
 std::string infx2pstfx(std::string inf) {
+std::string str, str2;
 TStack<char> stack;
-std::string str;
 std::map<char, int>prior = { {'(', 0}, {')', 1}, {'+', 2},
 {'-', 2}, {'*', 3}, {'/', 3} };
 for (int i = 0; i < inf.length(); i++) {
@@ -31,7 +31,6 @@ while (!stack.isEmpty()) {
 str += stack.get();
 stack.pop();
 }
-std::string str2;
 for (int i = 0; i < str.size(); i++) {
 str2 += str[i];
 str2 += " ";
