@@ -1,7 +1,7 @@
 // Copyright 2021 NNTU-CS
-#include "tstack.h"
 #include <string>
 #include <map>
+#include "tstack.h"
 
 std::string infx2pstfx(std::string inf) {
 TStack<char> stack;
