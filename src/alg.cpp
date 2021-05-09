@@ -1,4 +1,5 @@
 // Copyright 2021 NNTU-CS
+#include "tstack.h"
 #include <string>
 #include <map>
 
